@@ -1,1 +1,33 @@
+<header class="site-header" style="background-color: #0A2540; padding: 15px 0; border-bottom: 2px solid #635BFF;">
+  <div class="wrapper-global" style="display: flex; justify-content: space-between; align-items: center;">
+    
+    <div class="site-logo">
+      <a href="{{ '/' | relative_url }}" style="color: #FFFFFF; font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: 0.5px;">
+        SOCIETY <span style="color: #00D4B6;">ANALYTICS</span>
+      </a>
+    </div>
 
+    <nav class="site-nav">
+      <ul class="menu-root" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px;">
+        {% for link in site.data.navigation.main %}
+          <li class="menu-item {% if link.children %}has-children{% endif %}" style="position: relative;">
+            <a href="{{ link.url | relative_url }}" style="color: #FAFAFA; text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 8px 0; display: block; transition: color 0.2s;">
+              {{ link.title }} {% if link.children %} ▾ {% endif %}
+            </a>
+            
+            {% if link.children %}
+              <ul class="dropdown-menu">
+                {% for child in link.children %}
+                  <li>
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </div>
+</header>
