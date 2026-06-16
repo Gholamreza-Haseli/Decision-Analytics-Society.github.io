@@ -1,0 +1,31 @@
+# Site Settings
+title: "International Society of Decision Analytics & Cloud Supply Chain"
+description: "A premier global society for research and practice in SCM, MCDM, and Decision Analytics."
+url: "https://yoursociety.org"
+baseurl: ""
+
+# Color Theme Controls (Injected into CSS)
+theme_colors:
+  primary: "#0A2540"       # سرمه‌ای تیره مدرن و لوکس
+  secondary: "#635BFF"     # بنفش نئون برای لینک‌ها و علائم تأکیدی
+  accent: "#00D4B6"        # سبز نعنایی برای دکمه‌های فراخوان (ثبت نام)
+  background_light: "#FAFAFA"
+  background_dark: "#0F172A"
+
+# Collections Configuration (The engine for generating thousands of nested pages)
+collections:
+  editorial_board:
+    output: true
+    permalink: /editorial/:path/
+  members:
+    output: true
+    permalink: /directory/:path/
+  events:
+    output: true
+    permalink: /events/:path/
+
+# Markdown and Sass Settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  style: :compressed
