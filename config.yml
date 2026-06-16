@@ -1,8 +1,8 @@
 # Site Settings
 title: "International Society of Decision Analytics"
 description: "A premier global society for research and practice in SCM, MCDM, and Decision Analytics."
-url: "https://Decision-Analytics-Society"
-baseurl: "/academicpages"
+url: "https://gholamreza-haseli.github.io"
+baseurl: "/Decision-Analytics-Society"
 
 # Color Theme Controls (Injected into CSS)
 theme_colors:
