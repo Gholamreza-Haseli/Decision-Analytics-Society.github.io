@@ -1,1 +1,57 @@
+# Main Navigation Menu for the Society Website
+# این ساختار منوهای بالایی سایت و زیرمنوهای تو در تو را کنترل می‌کند.
 
+main:
+  - title: "Home"
+    url: /
+
+  - title: "About Society"
+    url: /about/
+    children:
+      - title: "History & Mission"
+        url: /about/mission/
+      - title: "Constitution & Bylaws"
+        url: /about/bylaws/
+      - title: "Board of Directors"
+        url: /directory/board-members/
+      - title: "Society Fellows"
+        url: /directory/fellows/
+
+  - title: "Journals & Editorial"
+    url: /publications/
+    children:
+      - title: "Journal of Decision Analytics"
+        url: /editorial/journal-a/
+      - title: "Cloud Supply Chain Management"
+        url: /editorial/journal-b/
+      - title: "Editorial Directory (All Editors)"
+        url: /editorial/
+      - title: "Call for Papers"
+        url: /publications/call-for-papers/
+
+  - title: "Conferences & Events"
+    url: /events/
+    children:
+      - title: "Upcoming Annual Conference (2026)"
+        url: /events/conferences/annual-conference-2026/
+      - title: "Past Conferences"
+        url: /events/conferences/
+      - title: "Workshops & Seminars"
+        url: /events/workshops/
+      - title: "Photo Gallery"
+        url: /events/gallery/
+
+  - title: "Membership"
+    url: /membership/
+    children:
+      - title: "Join the Society"
+        url: /membership/join/
+      - title: "Membership Benefits"
+        url: /membership/benefits/
+      - title: "Member Directory"
+        url: /directory/regular-members/
+      - title: "Renew Membership"
+        url: /membership/renew/
+
+  - title: "Contact"
+    url: /contact/
