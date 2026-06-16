@@ -1,1 +1,62 @@
+---
+layout: default
+---
+<article class="profile-page-wrapper">
+  <div class="profile-grid">
+    
+    <aside class="profile-sidebar">
+      <div class="sticky-sidebar-content">
+        <div class="profile-avatar-container">
+          <img src="{{ page.avatar | default: '/assets/images/avatars/default.jpg' }}" alt="{{ page.name }}" class="profile-image">
+        </div>
+        
+        <h1 class="profile-name">{{ page.name }}</h1>
+        <p class="profile-designation">{{ page.position }}</p>
+        <p class="profile-affiliation">{{ page.affiliation }}</p>
+        
+        {% if page.journal_role %}
+          <div class="badge-journal">
+            <span>{{ page.journal_role }}</span>
+          </div>
+        {% endif %}
 
+        <hr class="sidebar-divider">
+
+        <ul class="profile-meta-links">
+          {% if page.email %}
+            <li><a href="mailto:{{ page.email }}">✉️ {{ page.email }}</a></li>
+          {% endif %}
+          {% if page.website %}
+            <li><a href="{{ page.website }}" target="_blank">🌐 Personal Website</a></li>
+          {% endif %}
+          {% if page.scopus %}
+            <li><a href="{{ page.scopus }}" target="_blank">📄 Scopus Profile</a></li>
+          {% endif %}
+          {% if page.linkedin %}
+            <li><a href="{{ page.linkedin }}" target="_blank">🔗 LinkedIn</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </aside>
+
+    <section class="profile-main-content">
+      <nav class="breadcrumb-nav">
+        <a href="{{ '/' | relative_url }}">Home</a> / 
+        <a href="/directory/">Directory</a> / 
+        <span class="active-crumb">{{ page.name }}</span>
+      </nav>
+
+      <div class="profile-biography-section">
+        <h2>Biography</h2>
+        <div class="bio-text">
+          {{ page.executive_summary }}
+        </div>
+      </div>
+
+      <div class="profile-detailed-body">
+        {{ content }}
+      </div>
+    </section>
+
+  </div>
+</article>
